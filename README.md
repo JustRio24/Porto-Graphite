@@ -1,96 +1,97 @@
-# Porto-Graphite — Editorial Portfolio RIO
+# Porto-Graphite
 
-<div align="center">
+**Portfolio editorial monokrom untuk RIO — Fullstack Developer & AI Agent Engineer.**
 
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![WebGL](https://img.shields.io/badge/Graphics-OGL_WebGL-black?style=for-the-badge&logo=webgl&logoColor=white)](https://github.com/oframe/ogl)
-  [![License](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)](LICENSE)
-
-  <p align="center">
-    <strong>Portfolio editorial monokrom (graphite) — RIO, Fullstack Developer & AI Agent Engineer.</strong>
-  </p>
-
-  <p align="center">
-    Dibuat oleh <strong><a href="https://github.com/JustRio24">RIO</a></strong> — Fullstack Developer & AI Agent Engineer.
-  </p>
-
-</div>
+Porto-Graphite adalah website portfolio pribadi dengan estetika **graphite**: tenang, tegas, sinematik, dan berfokus pada tipografi serta motion. Dibangun di atas fondasi template editorial ECHO, kemudian di-customize penuh untuk identitas RIO.
 
 ---
 
-## ✦ Overview
+## Daftar Isi
 
-**Porto-Graphite** adalah portfolio pribadi yang di-customize dari template editorial ECHO. Mengangkat estetika **monokrom graphite** — brutalist minimalist, tipografi kuat, motion sinematik, dan interaksi 3D.
-
----
-
-## ✦ Fitur
-
-- **Preloader sinematik** — reveal per huruf ("RIO"), progress hairline + counter, exit curtain halus.
-- **Hero & typography metallic** — teks besar uppercase dengan gradien metalik, portrait masking.
-- **`ScrollExpandMedia`** — media yang mengembang saat scroll dengan unblur GPU-accelerated.
-- **Horizontal Experience Canvas** — timeline karier yang berjalan dari scroll vertikal.
-- **WorksWheel 3D** — drum reel 3D untuk proyek/landing pages.
-- **FlexCarousel (OGL WebGL)** — carousel liquid lens berbasis WebGL.
-- **Interactive Project Modal** — detail proyek: deskripsi, stats, deliverables, stack.
+- [Fitur](#fitur)
+- [Teknologi](#teknologi)
+- [Proyek](#proyek)
+- [Cara Menjalankan](#cara-menjalankan)
+- [Deployment](#deployment)
+- [Struktur](#struktur)
+- [Kontak](#kontak)
+- [Lisensi](#lisensi)
 
 ---
 
-## ✦ Tech Stack
+## Fitur
+
+### 🎬 Preloader Sinematik
+- Wordmark "RIO" muncul **per huruf** (staggered reveal).
+- Progress **hairline** dengan dot bercahaya + counter persen.
+- Exit **curtain** (slide ke atas) disusul hero reveal halus.
+- Menghormati `prefers-reduced-motion`.
+
+### 🗞️ Hero Editorial & Typography Metallic
+- Tipografi responsif berbasis viewport (`clamp` / `vw`).
+- Gradien metalik multi-layer pada teks besar.
+- Portrait depth masking pada foto hero.
+
+### 🔍 ScrollExpandMedia
+- Media mengembang mengikuti scroll: interpolasi dimensi, aspect ratio, dan blur.
+- Unblur dual-layer GPU-accelerated hingga 120 FPS.
+
+### 🧭 Horizontal Experience Canvas
+- Timeline karier horizontal yang didorong scroll vertikal.
+- Panel milestone interaktif + animasi "living flow".
+- Fallback aksesibel (`prefers-reduced-motion`).
+
+### 🎡 WorksWheel 3D Drum Reel
+- Proyeksi drum 3D (rotateX/rotateZ/translateZ).
+- Drag fisika, momentum inertia, scroll wheel, navigasi bertahap.
+- Terhubung ke modal inspeksi proyek.
+
+### 🌊 FlexCarousel (OGL WebGL)
+- Card slider bertenaga **OGL** dengan liquid lens bending.
+- Accordion dinamis, klik-untuk-fokus, dukungan keyboard/touch.
+
+### 🪟 Interactive Project Modal
+- Modal glassmorphic dengan backdrop blur.
+- Metadata lengkap: kategori, deskripsi, highlight, deliverables, stack.
+
+---
+
+## Teknologi
 
 | Domain | Teknologi | Keterangan |
 |---|---|---|
 | **Struktur** | HTML5 / Semantic Web | Markup SEO-optimized |
-| **Styling** | Vanilla CSS + Tailwind v3 | Design tokens monokrom |
-| **Graphics & WebGL** | [OGL](https://github.com/oframe/ogl) | Mesh & shader liquid bending |
+| **Styling** | Vanilla CSS + Tailwind CSS v3 | Design tokens monokrom graphite |
+| **Graphics & WebGL** | [OGL](https://github.com/oframe/ogl) | WebGL 3D & shader liquid |
 | **Logic & Motion** | Vanilla JavaScript (ES Modules) | Zero-framework |
 | **Typography** | Plus Jakarta Sans | Sans-serif editorial |
-| **Komponen** | `flex-carousel`, `works-wheel`, `scroll-expand-media` | Modular UI engine |
+| **Komponen** | `flex-carousel`, `works-wheel`, `scroll-expand-media`, `experience-section` | Modular UI engine |
 
 ---
 
-## ✦ Proyek
+## Proyek
 
-Portfolio menampilkan proyek-proyek asli RIO, antara lain:
+Portfolio menampilkan proyek-proyek asli RIO:
 
-- **MiDClass App** — Learning Management System (Android, Java, Firebase)
-- **SmartDrum** — IoT Dashboard monitoring & otomasi budidaya jamur
-- **Visit Palembang** — web promosi pariwisata Palembang (Web Design Competition 2025)
-- **Gobeng App** — React + Vite dengan sistem RBAC
-- **ERP Tempe 3 Puteri v2** — ERP untuk UMKM (Laravel)
-- **KONSTRA** — PWA manajemen kontraktor & proyek
-- **Sweetmelt Cookies** — e-commerce kue premium
-- **SPECTRA** — platform internal PT. SatSet MerahPutih Indonesia
-- **Payroll System HRIS** — sistem payroll & absensi (TypeScript)
-- **SIMAMANG** — sistem manajemen magang POLSRI (Laravel)
-- **UMKM Mie Mercon Jawara** — e-commerce UMKM
-
----
-
-## ✦ Struktur Project
-
-```bash
-Porto-Graphite/
-├── index.html                   # Halaman utama (SPA)
-├── flex-carousel.js             # Mesin carousel WebGL (OGL)
-├── FlexCarousel.css             # Stylesheet carousel
-├── works-wheel.js               # Komponen drum reel 3D
-├── scroll-expand-media.js       # Mesin media expand saat scroll
-├── experience-section.js        # Timeline horizontal pengalaman
-├── package.json                 # Konfigurasi & scripts
-├── assets/
-│   ├── preloader.css/js         # Preloader sinematik
-│   ├── hero_portrait.png        # Foto hero
-│   ├── projects/                # Screenshot proyek
-│   └── profile/                 # Foto profil
-└── README.md
-```
+| Proyek | Deskripsi | Stack |
+|---|---|---|
+| **MiDClass App** | Learning Management System: absensi, jadwal, tugas, kalender akademik | Android, Java, Firebase |
+| **SmartDrum** | IoT dashboard monitoring & otomasi budidaya jamur | IoT, Arduino, JavaScript |
+| **Visit Palembang** | Web promosi pariwisata Palembang (Web Design Competition 2025) | JavaScript, HTML/CSS |
+| **Gobeng App** | Web app React + Vite dengan sistem RBAC | React, Vite, RBAC |
+| **ERP Tempe 3 Puteri v2** | ERP UMKM: inventori, produksi, penjualan, keuangan | Laravel, Blade, PHP |
+| **KONSTRA** | PWA manajemen kontraktor & proyek (offline-first) | JavaScript, PWA |
+| **Sweetmelt Cookies** | E-commerce kue premium | JavaScript, E-commerce |
+| **SPECTRA** | Platform internal PT. SatSet MerahPutih Indonesia | Laravel, Blade, PHP |
+| **Payroll System HRIS** | Payroll & absensi komprehensif (HRIS) | TypeScript, HRIS |
+| **SIMAMANG** | Sistem manajemen magang POLSRI | Laravel, PHP, Blade |
+| **UMKM Mie Mercon Jawara** | E-commerce UMKM dengan manajemen produk & pesanan | Laravel, Blade |
 
 ---
 
-## ✦ Menjalankan Lokal
+## Cara Menjalankan
 
-Project ini murni statis (ES modules native). Jalankan dengan server HTTP apa pun:
+Project ini murni statis (ES modules native) — cukup dengan HTTP server apa pun.
 
 ```bash
 # Clone
@@ -108,25 +109,46 @@ Buka `http://localhost:8080`.
 
 ---
 
-## ✦ Deployment
+## Deployment
 
-Karena portfolio sepenuhnya statis, deploy instan ke hosting edge mana pun:
+Karena portfolio sepenuhnya statis, deploy ke hosting edge mana pun:
 
-- **Vercel**: `vercel` dari root, atau hubungkan repo GitHub.
-- **Netlify**: drag & drop folder, atau hubungkan repo (publish dir `/`).
-- **GitHub Pages**: Settings → Pages → source `main`, folder `/ (root)`.
+- **Vercel** — `vercel` dari root, atau hubungkan repo GitHub.
+- **Netlify** — drag & drop folder, atau hubungkan repo (publish dir `/`).
+- **GitHub Pages** — Settings → Pages → source `main`, folder `/ (root)`.
 
 ---
 
-## ✦ Connect
+## Struktur
+
+```bash
+Porto-Graphite/
+├── index.html                   # Halaman utama (SPA)
+├── flex-carousel.js             # Mesin carousel WebGL (OGL)
+├── FlexCarousel.css             # Stylesheet carousel
+├── works-wheel.js               # Komponen drum reel 3D
+├── scroll-expand-media.js       # Mesin media expand saat scroll
+├── experience-section.js        # Timeline horizontal pengalaman
+├── package.json                 # Konfigurasi & scripts
+├── assets/
+│   ├── preloader.css / .js      # Preloader sinematik
+│   ├── hero_portrait.png        # Foto hero
+│   ├── projects/                # Screenshot proyek
+│   └── profile/                 # Foto profil
+└── README.md
+```
+
+---
+
+## Kontak
 
 - **GitHub**: [@JustRio24](https://github.com/JustRio24)
 - **Instagram**: [@justrio.24](https://www.instagram.com/justrio.24/)
 - **LinkedIn**: [rio](https://www.linkedin.com/in/rio-rio-86a687297/)
-- **Portfolio lama**: [justrio.my.id](https://justrio.my.id)
+- **Situs lama**: [justrio.my.id](https://justrio.my.id)
 
 ---
 
-## ✦ Lisensi
+## Lisensi
 
 Project ini open-source di bawah [MIT License](LICENSE).
