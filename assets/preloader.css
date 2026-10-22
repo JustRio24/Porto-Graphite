@@ -1,0 +1,135 @@
+/* ============================================================
+   RIO — Preloader (sinematik, tenang, editorial)
+   Desain ulang total: typographic reveal + hairline + counter
+   ============================================================ */
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #070709;
+  color: #ffffff;
+  overflow: hidden;
+  /* curtain exit handled via JS: transform translateY(-101%) */
+  transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform;
+}
+#preloader.exit {
+  transform: translateY(-101%);
+}
+
+/* Inner content: fades/rises slightly just before curtain */
+.pl-inner {
+  position: relative;
+  text-align: center;
+  padding: 0 2rem;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+#preloader.exit .pl-inner {
+  opacity: 0;
+  transform: translateY(-18px);
+}
+
+/* ---- Wordmark: per-letter staggered reveal ---- */
+.pl-title {
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  font-size: clamp(3rem, 11vw, 7.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  overflow: hidden;
+}
+.pl-letter {
+  display: inline-block;
+  transform: translateY(115%);
+  animation: pl-letter-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  margin: 0 0.11em; /* proportional inter-letter spacing for short wordmark */
+}
+.pl-letter:first-child { margin-left: 0; }
+.pl-letter:last-child { margin-right: 0; }
+.pl-letter:nth-child(1) { animation-delay: 0.05s; }
+.pl-letter:nth-child(2) { animation-delay: 0.16s; }
+.pl-letter:nth-child(3) { animation-delay: 0.27s; }
+@keyframes pl-letter-in {
+  to { transform: translateY(0); }
+}
+
+/* ---- Hairline progress with traveling dot ---- */
+.pl-line {
+  position: relative;
+  height: 1px;
+  width: min(320px, 60vw);
+  margin: 1.8rem auto 0;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: visible;
+}
+.pl-line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.pl-dot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+/* ---- Meta row: tag + counter ---- */
+.pl-meta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #5a5a5a;
+  font-weight: 600;
+  opacity: 0;
+  animation: pl-meta-in 0.6s ease 0.5s forwards;
+}
+@keyframes pl-meta-in {
+  to { opacity: 1; }
+}
+.pl-count {
+  font-variant-numeric: tabular-nums;
+  color: #c9c9c9;
+}
+.pl-count-num {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* ---- Hero reveal after curtain ---- */
+@keyframes preloader-hero-reveal {
+  from { opacity: 0; transform: translateY(22px); filter: blur(6px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.reveal-on-load {
+  animation: preloader-hero-reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-letter,
+  .pl-meta { animation: none; opacity: 1; transform: none; }
+  #preloader { transition: opacity 0.4s ease; }
+  #preloader.exit { transform: none; opacity: 0; }
+}
