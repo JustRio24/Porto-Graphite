@@ -1,4 +1,4 @@
-# ECHO — Editorial Developer & Designer Portfolio
+# Porto-Graphite — Editorial Portfolio RIO
 
 <div align="center">
 
@@ -7,11 +7,11 @@
   [![License](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)](LICENSE)
 
   <p align="center">
-    <strong>A bespoke, high-performance monochrome editorial portfolio showcasing digital craftsmanship, spatial web animations, and interactive design engineering.</strong>
+    <strong>Portfolio editorial monokrom (graphite) — RIO, Fullstack Developer & AI Agent Engineer.</strong>
   </p>
 
   <p align="center">
-    Crafted by <strong><a href="https://github.com/Jishnu09-siuu">Jishnu Mondal</a></strong> — Designer & Full-Stack Creative Developer.
+    Dibuat oleh <strong><a href="https://github.com/JustRio24">RIO</a></strong> — Fullstack Developer & AI Agent Engineer.
   </p>
 
 </div>
@@ -20,143 +20,113 @@
 
 ## ✦ Overview
 
-**ECHO** is an editorial developer and designer portfolio engineered with a focus on typography, fluid physics, and cutting-edge web graphics. Built around a curated monochrome aesthetic, it marries brutalist minimalism with rich micro-interactions, hardware-accelerated scroll animations, and interactive 3D drum reel navigation.
-
-Whether presenting production landing pages, full-stack applications, or bespoke brand identities, ECHO provides an immersive editorial reading and browsing experience.
+**Porto-Graphite** adalah portfolio pribadi yang di-customize dari template editorial ECHO. Mengangkat estetika **monokrom graphite** — brutalist minimalist, tipografi kuat, motion sinematik, dan interaksi 3D.
 
 ---
 
-## ✦ Key Features & Interactive Architecture
+## ✦ Fitur
 
-### 1. 🪐 Custom ECHO Orbital Preloader
-- Seamless intro experience with an orbital wavy dot animation synchronized via `requestAnimationFrame`.
-- Auto-detects first load and dissolves smoothly to unveil the editorial hero section.
-
-### 2. 🗞️ Editorial Hero & Metallic Typography Shaders
-- Fluid responsive typography driven by dynamic viewport calculations (`clamp` / `vw`).
-- Multi-layer metallic header effects and integrated portrait depth masking.
-- Intersection-observer-powered entrance reveals that gracefully retrigger on revisit.
-
-### 3. 🔍 `ScrollExpandMedia` Kinetic Canvas
-- Scroll-driven media expansion stage that smoothly interpolates card dimensions, aspect ratio, and blur filters.
-- Dual-layer GPU-accelerated unblur rendering running at 120 FPS without reflow penalties.
-- Minimalist perimeter content layout ensuring 100% unobscured artwork visibility.
-
-### 4. 🧭 Horizontal Spatial Experience Canvas
-- Sticky horizontal timeline translating vertical user scroll into horizontal spatial progression.
-- Interactive timeline panels displaying milestones, career history, and "living flow" energy animations.
-- Accessible fallback honoring user OS preferences (`prefers-reduced-motion`).
-
-### 5. 🎡 WorksWheel 3D Drum Reel
-- Mathematical 3D cylindrical drum projection with radial ring transformations (`rotateX`, `rotateZ`, `translateZ`).
-- Physics-based smooth drag gestures, momentum inertia, wheel scrolling, and step navigation.
-- Deep project integration linking directly into dynamic modal inspection.
-
-### 6. 🌊 FlexCarousel (OGL WebGL Liquid Preset)
-- Interactive card slider powered by **OGL** (lightweight WebGL engine) with liquid lens bending and real-time mesh displacement.
-- Dynamic accordion states, focus-on-click navigation, and full keyboard/touch support.
-
-### 7. 🪟 Interactive Project Inspection Modal
-- Glassmorphic modal viewer with animated backdrop blur (`cubic-bezier` spring easing).
-- Comprehensive project metadata: client background, deliverable scopes, tech stacks, and direct links to live deployments.
+- **Preloader sinematik** — reveal per huruf ("RIO"), progress hairline + counter, exit curtain halus.
+- **Hero & typography metallic** — teks besar uppercase dengan gradien metalik, portrait masking.
+- **`ScrollExpandMedia`** — media yang mengembang saat scroll dengan unblur GPU-accelerated.
+- **Horizontal Experience Canvas** — timeline karier yang berjalan dari scroll vertikal.
+- **WorksWheel 3D** — drum reel 3D untuk proyek/landing pages.
+- **FlexCarousel (OGL WebGL)** — carousel liquid lens berbasis WebGL.
+- **Interactive Project Modal** — detail proyek: deskripsi, stats, deliverables, stack.
 
 ---
 
 ## ✦ Tech Stack
 
-| Domain | Technology | Description |
+| Domain | Teknologi | Keterangan |
 |---|---|---|
-| **Structure** | HTML5 / Semantic Web | SEO-optimized, accessible markup with meta hierarchy |
-| **Styling** | Vanilla CSS + Tailwind CSS v3 | Custom dark/light design tokens, typography & CSS variables |
-| **Graphics & WebGL** | [OGL](https://github.com/oframe/ogl) | High-performance WebGL 3D meshes & shaders for liquid bending |
-| **Logic & Motion** | Vanilla JavaScript (ES Modules) | Lightweight, zero-framework overhead, modular components |
-| **Typography** | Plus Jakarta Sans | Editorial modernist sans-serif loaded from Google Fonts |
-| **Components** | `flex-carousel`, `works-wheel`, `scroll-expand-media` | Bespoke modular UI engines |
+| **Struktur** | HTML5 / Semantic Web | Markup SEO-optimized |
+| **Styling** | Vanilla CSS + Tailwind v3 | Design tokens monokrom |
+| **Graphics & WebGL** | [OGL](https://github.com/oframe/ogl) | Mesh & shader liquid bending |
+| **Logic & Motion** | Vanilla JavaScript (ES Modules) | Zero-framework |
+| **Typography** | Plus Jakarta Sans | Sans-serif editorial |
+| **Komponen** | `flex-carousel`, `works-wheel`, `scroll-expand-media` | Modular UI engine |
 
 ---
 
-## ✦ Featured Projects
+## ✦ Proyek
 
-The portfolio indexes a curated roster of production web applications, landing pages, and client systems:
+Portfolio menampilkan proyek-proyek asli RIO, antara lain:
 
-- **Aether AI**: Cognitive workspace engineered for deep systemic research and reasoning canvas telemetry.
-- **Aether Protocol**: Monolithic preview portal and executive onboarding architectural briefing flow.
-- **Afterform S01**: Minimalist architectural lookbook and editorial digital showcase.
-- **Cafe Website (Mocha & Miso)**: Full-stack cafe management system with order processing and real-time reservation portal.
-- **Design Studio**: Bold creative agency identity website with fluid layout systems.
-- **Julian Vance Photography**: Analog & editorial photography archive showcasing visual storytelling.
-- **Sen Cruzo Client Portfolio**: Luxury architectural client presentation portfolio with custom typography.
+- **MiDClass App** — Learning Management System (Android, Java, Firebase)
+- **SmartDrum** — IoT Dashboard monitoring & otomasi budidaya jamur
+- **Visit Palembang** — web promosi pariwisata Palembang (Web Design Competition 2025)
+- **Gobeng App** — React + Vite dengan sistem RBAC
+- **ERP Tempe 3 Puteri v2** — ERP untuk UMKM (Laravel)
+- **KONSTRA** — PWA manajemen kontraktor & proyek
+- **Sweetmelt Cookies** — e-commerce kue premium
+- **SPECTRA** — platform internal PT. SatSet MerahPutih Indonesia
+- **Payroll System HRIS** — sistem payroll & absensi (TypeScript)
+- **SIMAMANG** — sistem manajemen magang POLSRI (Laravel)
+- **UMKM Mie Mercon Jawara** — e-commerce UMKM
 
 ---
 
-## ✦ Project Structure
+## ✦ Struktur Project
 
 ```bash
-ECHO-WEBSITE/
-├── index.html                   # Core single-page portfolio layout & markup
-├── flex-carousel.js             # WebGL / OGL-powered liquid carousel engine
-├── FlexCarousel.css             # Stylesheet for carousel layout & states
-├── FlexCarousel.tsx             # React / TypeScript source reference
-├── works-wheel.js               # 3D Cylindrical drum reel component
-├── scroll-expand-media.js       # Scroll-driven media expansion engine
-├── ScrollExpandMedia.tsx        # Component source reference
-├── experience-section.js        # Horizontal spatial timeline engine
-├── package.json                 # Project configuration & scripts
-├── assets/                      # Brand assets, portrait imagery, and icons
-├── Project Images/              # Production portfolio preview captures
-└── Landing Page Assest/         # Full-length landing page showcase assets
+Porto-Graphite/
+├── index.html                   # Halaman utama (SPA)
+├── flex-carousel.js             # Mesin carousel WebGL (OGL)
+├── FlexCarousel.css             # Stylesheet carousel
+├── works-wheel.js               # Komponen drum reel 3D
+├── scroll-expand-media.js       # Mesin media expand saat scroll
+├── experience-section.js        # Timeline horizontal pengalaman
+├── package.json                 # Konfigurasi & scripts
+├── assets/
+│   ├── preloader.css/js         # Preloader sinematik
+│   ├── hero_portrait.png        # Foto hero
+│   ├── projects/                # Screenshot proyek
+│   └── profile/                 # Foto profil
+└── README.md
 ```
 
 ---
 
-## ✦ Getting Started Locally
+## ✦ Menjalankan Lokal
 
-This project is built using native ES modules and standard web technologies. You can run it with any local HTTP server:
+Project ini murni statis (ES modules native). Jalankan dengan server HTTP apa pun:
 
-### Prerequisites
-- Python 3.x **or** Node.js installed on your machine.
-
-### Option 1: Python Simple HTTP Server (Recommended)
 ```bash
-# Clone the repository
-git clone https://github.com/Jishnu09-siuu/ECHO-WEBSITE.git
-cd ECHO-WEBSITE
+# Clone
+git clone https://github.com/JustRio24/Porto-Graphite.git
+cd Porto-Graphite
 
-# Run local development server
-npm start
-# or directly:
+# Option 1: Python (rekomendasi)
 python3 -m http.server 8080
-```
-Then navigate to `http://localhost:8080` in your browser.
 
-### Option 2: Node.js / Vite / `npx serve`
-```bash
+# Option 2: Node
 npx serve .
-# or
-npx live-server
 ```
+
+Buka `http://localhost:8080`.
 
 ---
 
 ## ✦ Deployment
 
-Because ECHO is completely static and modular, it can be deployed instantly to any edge hosting provider:
+Karena portfolio sepenuhnya statis, deploy instan ke hosting edge mana pun:
 
-- **Vercel**: Run `vercel` from the root directory or connect the GitHub repository.
-- **Netlify**: Drag and drop the folder or connect via Git with publish directory set to `/`.
-- **GitHub Pages**: Head to repository **Settings > Pages** and set source to branch `main` and folder `/ (root)`.
-
----
-
-## ✦ Connect & Socials
-
-- **Portfolio**: [Jishnu Mondal](https://jishnumondal.vercel.app/)
-- **GitHub**: [@Jishnu09-siuu](https://github.com/Jishnu09-siuu)
-- **LinkedIn**: [jishnu-mondal](https://www.linkedin.com/in/jishnu-mondal/)
-- **X / Twitter**: [@Jishn8m](https://x.com/Jishn8m)
+- **Vercel**: `vercel` dari root, atau hubungkan repo GitHub.
+- **Netlify**: drag & drop folder, atau hubungkan repo (publish dir `/`).
+- **GitHub Pages**: Settings → Pages → source `main`, folder `/ (root)`.
 
 ---
 
-## ✦ License
+## ✦ Connect
 
-This project is open-source and available under the [MIT License](LICENSE).
+- **GitHub**: [@JustRio24](https://github.com/JustRio24)
+- **Instagram**: [@justrio.24](https://www.instagram.com/justrio.24/)
+- **LinkedIn**: [rio](https://www.linkedin.com/in/rio-rio-86a687297/)
+- **Portfolio lama**: [justrio.my.id](https://justrio.my.id)
+
+---
+
+## ✦ Lisensi
+
+Project ini open-source di bawah [MIT License](LICENSE).
